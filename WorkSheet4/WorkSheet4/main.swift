@@ -8,72 +8,73 @@
 import Foundation
 
 
-let randomInteger: [Int] = [38, 97, 25, 66, 90, 31, 16, 86, 33, 59]
-var oddSum: Int = 0
-var oddAvg: Double = 0.0
-var oddCount: Int = 0
-var evenSum: Int = 0
-var evenAvg: Double = 0.0
-var evenCount: Int = 0
+//let randomInteger: [Int] = [38, 97, 25, 66, 90, 31, 16, 86, 33, 59]
+//var oddSum: Int = 0
+//var oddAvg: Double = 0.0
+//var oddCount: Int = 0
+//var evenSum: Int = 0
+//var evenAvg: Double = 0.0
+//var evenCount: Int = 0
+//
+//for i in randomInteger {
+//
+//    if i % 2 == 0{
+//        evenSum += i
+//        evenCount += 1
+//    } else {
+//        oddSum += i
+//        oddCount += 1
+//    }
+//
+//}
+//evenAvg = Double(evenSum)/Double(evenCount)
+//oddAvg = Double(oddSum)/Double(oddCount)
+//print("짝수의 합 : \(evenSum), 짝수의 평균 : \(evenAvg)")
+//print("홀수의 합 : \(oddSum), 홀수의 평균 : \(oddAvg)")
+//
+//
+//
+//var integers: String = readLine()!
+//var filterIntegers: [String] = []
+//var Aintegers = Set<String> ()
+//var Bintegers = Set<String> ()
+//var count: Int = 0
+//
+//filterIntegers = integers.components(separatedBy: " ")
+//
+//for i in filterIntegers {
+//    count += 1
+//    if count % 2 == 1 {
+//        Aintegers.insert(i)
+//    } else {
+//        Bintegers.insert(i)
+//    }
+//}
+//let subtracting = Aintegers.subtracting(Bintegers).sorted()
+//print("A집합 : \(Aintegers), B집합 : \(Bintegers)")
+//print("A집합과 B집합의 차집합 : \(subtracting)")
 
-for i in randomInteger {
+//var greatKorean: [Int: String] = [111 : "이순신", 222 : "홍길동", 333 : "강감찬", 444 : "세종대왕", 555 : "을지문덕"]
 
-    if i % 2 == 0{
-        evenSum += i
-        evenCount += 1
-    } else {
-        oddSum += i
-        oddCount += 1
-    }
-
-}
-evenAvg = Double(evenSum)/Double(evenCount)
-oddAvg = Double(oddSum)/Double(oddCount)
-print("짝수의 합 : \(evenSum), 짝수의 평균 : \(evenAvg)")
-print("홀수의 합 : \(oddSum), 홀수의 평균 : \(oddAvg)")
-
-
-
-var integers: String = readLine()!
-var filterIntegers: [String] = []
-var Aintegers = Set<String> ()
-var Bintegers = Set<String> ()
-var count: Int = 0
-
-filterIntegers = integers.components(separatedBy: " ")
-
-for i in filterIntegers {
-    count += 1
-    if count % 2 == 1 {
-        Aintegers.insert(i)
-    } else {
-        Bintegers.insert(i)
-    }
-}
-let subtracting = Aintegers.subtracting(Bintegers).sorted()
-print("A집합 : \(Aintegers), B집합 : \(Bintegers)")
-print("A집합과 B집합의 차집합 : \(subtracting)")
-
-var greatKorean: [Int: String] = [111 : "이순신", 222 : "홍길동", 333 : "강감찬", 444 : "세종대왕", 555 : "을지문덕"]
-var keys: [Int] = []
-
+var code = (111,222,333,444,555)
+var name = ("이순신","홍길동","강감찬","세종대왕","을지문덕")
+var greatKorean: [Int: String] = [code.0: name.0, code.1: name.1, code.2: name.2, code.3: name.3, code.4: name.4]
 var inputKey: String = readLine()!
-keys.append(Int(inputKey)!)
 
-if keys[0] == 0 {
+if Int(inputKey) == 0 {
     for (greatKoreanKey, greatKoreanName) in greatKorean {
         print("\(greatKoreanKey) : \(greatKoreanName)")
     }
-} else if keys[0] == 111 {
-    print(greatKorean[111]!)
-} else if keys[0] == 222 {
-    print(greatKorean[222]!)
-} else if keys[0] == 333 {
-    print(greatKorean[333]!)
-} else if keys[0] == 444 {
-    print(greatKorean[444]!)
-} else if keys[0] == 555 {
-    print(greatKorean[555]!)
+} else if Int(inputKey) == code.0 {
+    print(name.0)
+} else if Int(inputKey) == code.1 {
+    print(name.1)
+} else if Int(inputKey) == code.2 {
+    print(name.2)
+} else if Int(inputKey) == code.3 {
+    print(name.3)
+} else if Int(inputKey) == code.4 {
+    print(name.4)
 } else {
     print("존재하지 않는 key값입니다.")
 }
@@ -95,3 +96,6 @@ if keys[0] == 0 {
 /*
  3. 다음의 테이블의 해당하는 Key, Value로 구성된 정보를 가지는 Dictionary를 생성하고, 실행시 0을 입력하면 전체 명단을 보여주고, Key값을 입력하면 해당하는 Value를 출력하는 프로그램을 작성하시오.
  */
+
+
+
