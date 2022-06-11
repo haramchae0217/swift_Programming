@@ -7,16 +7,16 @@
 
 import Foundation
 
+/*
+ 1. '사람'을 나타내기 위한 클래스를 정의하시오.
+ 사람의 나이, 성별을 나타내는 프로퍼티와 '생각하다'라는 메소드를 추가하시오.
+ */
+
 enum Gender {
     case man
     case woman
     case none
 }
-
-/*
- 1. '사람'을 나타내기 위한 클래스를 정의하시오.
- 사람의 나이, 성별을 나타내는 프로퍼티와 '생각하다'라는 메소드를 추가하시오.
- */
 
 class Person {
     var name: String

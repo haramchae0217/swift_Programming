@@ -44,7 +44,6 @@ let square = Square()
 let triangle = Triangle()
 
 var circleArea = circle.radius * circle.radius * circle.pie
-
 var squareArea = (square.maxX-square.minX) * (square.maxY-square.minY)
 
 func distance(coordinateX1: Double, coordinateX2: Double, coordinateY1: Double, coordinateY2: Double) -> Double {
@@ -55,12 +54,6 @@ func distance(coordinateX1: Double, coordinateX2: Double, coordinateY1: Double, 
     return length
 }
 
-var lengthA = distance(coordinateX1: triangle.coordinateX1, coordinateX2: triangle.coordinateX2, coordinateY1: triangle.coordinateY1, coordinateY2: triangle.coordinateY2)
-var lengthB = distance(coordinateX1: triangle.coordinateX3, coordinateX2: triangle.coordinateX2, coordinateY1: triangle.coordinateY3, coordinateY2: triangle.coordinateY2)
-var lengthC = distance(coordinateX1: triangle.coordinateX3, coordinateX2: triangle.coordinateX1, coordinateY1: triangle.coordinateY3, coordinateY2: triangle.coordinateY1)
-
-var triangleArea = round((lengthA + lengthB + lengthC) / 2)
-
 func areaCalc(circleArea: Double, triangleArea: Double, squareArea: Double) -> Double {
     area.append(circleArea)
     area.append(triangleArea)
@@ -69,6 +62,12 @@ func areaCalc(circleArea: Double, triangleArea: Double, squareArea: Double) -> D
     sortArea = area.sorted(by: >)
     return sortArea[0]
 }
+
+var lengthA = distance(coordinateX1: triangle.coordinateX1, coordinateX2: triangle.coordinateX2, coordinateY1: triangle.coordinateY1, coordinateY2: triangle.coordinateY2)
+var lengthB = distance(coordinateX1: triangle.coordinateX3, coordinateX2: triangle.coordinateX2, coordinateY1: triangle.coordinateY3, coordinateY2: triangle.coordinateY2)
+var lengthC = distance(coordinateX1: triangle.coordinateX3, coordinateX2: triangle.coordinateX1, coordinateY1: triangle.coordinateY3, coordinateY2: triangle.coordinateY1)
+
+var triangleArea = round((lengthA + lengthB + lengthC) / 2)
 
 var mostArea = areaCalc(circleArea: circleArea, triangleArea: triangleArea, squareArea: squareArea)
 
