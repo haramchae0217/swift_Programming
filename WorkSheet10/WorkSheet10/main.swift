@@ -141,13 +141,14 @@ let manList: [Man] = [홍길동, 이순신, 을지문덕, 세종대왕, 궁예]
 let womanList: [Woman] = [갑순이, 신사임당, 퀴리부인, 장희빈, 유관순]
 var womanIdealPick: [String: String] = [:]
 var manIdealPick: [String: String] = [:]
-var couplePick: [String: String] = [:]
 
 for woman in womanList {
     for man in manList {
-        woman.thinking(height: man.height, money: man.money, car: man.car, name: woman.name, weight: woman.weight, color: woman.color, live: woman.live)
-        man.thinking(height: man.height, money: man.money, car: man.car, name: man.name, weight: woman.weight, color: woman.color, live: woman.live)
-        
+        woman.thinking(height: man.height, money: man.money, car: man.car, name: man.name, weight: woman.weight, color: woman.color, live: woman.live)
+        man.thinking(height: man.height, money: man.money, car: man.car, name: woman.name, weight: woman.weight, color: woman.color, live: woman.live)
+        if manIdealPick.keys == womanIdealPick.values && womanIdealPick.keys == manIdealPick.values {
+            
+        }
     }
 }
 
@@ -155,4 +156,3 @@ for woman in womanList {
 
 print(manIdealPick)
 print(womanIdealPick)
-print(couplePick)
