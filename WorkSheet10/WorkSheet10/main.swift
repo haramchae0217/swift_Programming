@@ -146,9 +146,9 @@ for woman in womanList {
     for man in manList {
         woman.thinking(height: man.height, money: man.money, car: man.car, name: man.name, weight: woman.weight, color: woman.color, live: woman.live)
         man.thinking(height: man.height, money: man.money, car: man.car, name: woman.name, weight: woman.weight, color: woman.color, live: woman.live)
-        if manIdealPick.keys == womanIdealPick.values && womanIdealPick.keys == manIdealPick.values {
-            
-        }
+//        if manIdealPick.keys == womanIdealPick.values && womanIdealPick.keys == manIdealPick.values {
+//            
+//        }
     }
 }
 
