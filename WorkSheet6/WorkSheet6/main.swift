@@ -15,7 +15,7 @@ func printHello() {
     print("hello")
 }
 
-var count : Int = 0
+var count: Int = 0
 
 while count<10 {
     printHello()
