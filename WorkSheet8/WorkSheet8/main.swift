@@ -87,3 +87,20 @@ func evaluate(_ calculate: calc) -> Int {
 
 print(evaluate(result))
 
+
+enum Planet: Int {
+    case mercury, venus, earth, mars, jupiter, saturn, uranus, neptune
+}
+
+let positionToFind = 11
+
+if let somePlanet = Planet(rawValue: positionToFind) {
+    switch somePlanet {
+    case .earth :
+        print("mostly harmless")
+    default:
+        print("not a safe place for humans")
+    }
+} else {
+    print("there isn't a planet at position \(positionToFind)")
+}
